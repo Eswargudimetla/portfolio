@@ -1,185 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Eswar Reddy | AI Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Eswar Reddy | AI Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
-            color: white;
-            line-height: 1.7;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top left, #1f1f3a, #0f0f0f 60%);
+    color: white;
+    overflow-x: hidden;
+}
 
-        section {
-            padding: 100px 12%;
-        }
+/* Animated background glow */
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,255,255,0.15), transparent 70%);
+    top: -200px;
+    left: -200px;
+    animation: moveGlow 10s infinite alternate ease-in-out;
+    z-index: -1;
+}
 
-        h1 {
-            font-size: 52px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
+@keyframes moveGlow {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(200px,150px); }
+}
 
-        h2 {
-            font-size: 34px;
-            margin-bottom: 30px;
-        }
+section {
+    padding: 100px 12%;
+}
 
-        h3 {
-            margin-bottom: 10px;
-        }
+h1 {
+    font-size: 54px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #00f5ff, #9f00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        p {
-            color: #cccccc;
-            margin-bottom: 15px;
-        }
+h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
 
-        .buttons {
-            margin-top: 25px;
-        }
+h3 {
+    margin-bottom: 12px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            margin-right: 15px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s ease;
-        }
+p {
+    color: #cccccc;
+    margin-bottom: 15px;
+}
 
-        .primary {
-            background: white;
-            color: black;
-        }
+/* Buttons */
+.buttons {
+    margin-top: 30px;
+}
 
-        .outline {
-            border: 1px solid white;
-            color: white;
-        }
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    margin-right: 15px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
 
-        .btn:hover {
-            transform: translateY(-3px);
-        }
+.primary {
+    background: linear-gradient(90deg, #00f5ff, #9f00ff);
+    color: white;
+}
 
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-        }
+.outline {
+    border: 1px solid #888;
+    color: white;
+}
 
-        .card {
-            background: rgba(255,255,255,0.05);
-            padding: 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            transition: 0.3s ease;
-        }
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
 
-        .card:hover {
-            transform: translateY(-8px);
-            background: rgba(255,255,255,0.08);
-        }
+/* Projects grid */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
 
-        footer {
-            text-align: center;
-            padding: 50px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #888;
-        }
+/* Glass Cards */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.4s ease;
+}
 
-        @media(max-width: 768px) {
-            section {
-                padding: 70px 8%;
-            }
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #00f5ff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
 
-            h1 {
-                font-size: 38px;
-            }
-        }
-    </style>
+footer {
+    text-align: center;
+    padding: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #888;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    section {
+        padding: 70px 8%;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <section>
-    <h1>Eswar Sai Chandra Reddy Gudimetla</h1>
-    <h3>AI Engineer | Cloud & DevOps | ML Systems Builder</h3>
+<h1>Eswar Sai Chandra Reddy Gudimetla</h1>
+<h3>AI Engineer | Cloud & DevOps | ML Systems Builder</h3>
 
-    <p>
-        Master's graduate in Computer Science building scalable AI systems,
-        cloud-native infrastructure, and production-ready intelligent applications.
-    </p>
+<p>
+Master's graduate in Computer Science building scalable AI systems,
+cloud-native infrastructure, and production-ready intelligent applications.
+</p>
 
-    <div class="buttons">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="https://www.linkedin.com/in/eswar-sai-chandra-reddy-gudimetla-255970227/" target="_blank" class="btn outline">LinkedIn</a>
-        <a href="https://github.com/Eswargudimetla" target="_blank" class="btn outline">GitHub</a>
-    </div>
+<div class="buttons">
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="https://www.linkedin.com/in/eswar-sai-chandra-reddy-gudimetla-255970227/" target="_blank" class="btn outline">LinkedIn</a>
+<a href="https://github.com/Eswargudimetla" target="_blank" class="btn outline">GitHub</a>
+</div>
 </section>
 
 <section id="projects">
-    <h2>Selected Projects</h2>
+<h2>Selected Projects</h2>
 
-    <div class="projects">
+<div class="projects">
 
-        <div class="card">
-            <h3>AI Job Application Agent</h3>
-            <p>LLM-powered automation tool for resume scoring and job matching.</p>
-            <p><strong>Tech:</strong> Python, LLMs, Streamlit, NLP</p>
-        </div>
+<div class="card">
+<h3>AI Job Application Agent</h3>
+<p>LLM-powered automation tool for resume scoring and job matching.</p>
+<p><strong>Tech:</strong> Python, LLMs, Streamlit, NLP</p>
+</div>
 
-        <div class="card">
-            <h3>DriveLink – Cloud Car Rental Platform</h3>
-            <p>Full-stack cloud booking system with scalable backend architecture.</p>
-            <p><strong>Tech:</strong> React, Node.js, MySQL, AWS</p>
-        </div>
+<div class="card">
+<h3>DriveLink – Cloud Car Rental Platform</h3>
+<p>Full-stack cloud booking system with scalable backend architecture.</p>
+<p><strong>Tech:</strong> React, Node.js, MySQL, AWS</p>
+</div>
 
-        <div class="card">
-            <h3>Emotion Detection System</h3>
-            <p>Transformer-based NLP emotion classifier with dashboard visualization.</p>
-            <p><strong>Tech:</strong> HuggingFace, Python, Plotly</p>
-        </div>
+<div class="card">
+<h3>Emotion Detection System</h3>
+<p>Transformer-based NLP emotion classifier with dashboard visualization.</p>
+<p><strong>Tech:</strong> HuggingFace, Python, Plotly</p>
+</div>
 
-        <div class="card">
-            <h3>Parking Space Detection</h3>
-            <p>Computer vision system detecting parking availability using CNN.</p>
-            <p><strong>Tech:</strong> OpenCV, Deep Learning</p>
-        </div>
+<div class="card">
+<h3>Parking Space Detection</h3>
+<p>Computer vision system detecting parking availability using CNN.</p>
+<p><strong>Tech:</strong> OpenCV, Deep Learning</p>
+</div>
 
-    </div>
+</div>
 </section>
 
 <section>
-    <h2>Technical Skills</h2>
-    <p><strong>AI/ML:</strong> TensorFlow, PyTorch, Transformers, Scikit-learn</p>
-    <p><strong>Cloud:</strong> AWS (EC2, S3, RDS, Lambda), Docker</p>
-    <p><strong>DevOps:</strong> CI/CD, GitHub Actions, Terraform</p>
-    <p><strong>Data:</strong> SQL, Pandas, Kafka</p>
-    <p><strong>Programming:</strong> Python, C++, JavaScript</p>
+<h2>Technical Skills</h2>
+<p><strong>AI/ML:</strong> TensorFlow, PyTorch, Transformers, Scikit-learn</p>
+<p><strong>Cloud:</strong> AWS (EC2, S3, RDS, Lambda), Docker</p>
+<p><strong>DevOps:</strong> CI/CD, GitHub Actions, Terraform</p>
+<p><strong>Data:</strong> SQL, Pandas, Kafka</p>
+<p><strong>Programming:</strong> Python, C++, JavaScript</p>
 </section>
 
 <section>
-    <h2>Contact</h2>
-    <p>Email: gudimetlaeswarsaichandrareddy@gmail.com</p>
-    <p>Open to AI Engineer | Cloud Engineer | Data Engineer | DevOps Roles</p>
+<h2>Contact</h2>
+<p>Email: gudimetlaeswarsaichandrareddy@gmail.com</p>
+<p>Open to AI Engineer | Cloud Engineer | Data Engineer | DevOps Roles</p>
 </section>
 
 <footer>
-    © 2026 Eswar Sai Chandra Reddy Gudimetla
+© 2026 Eswar Sai Chandra Reddy Gudimetla
 </footer>
 
 </body>
